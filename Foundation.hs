@@ -37,6 +37,7 @@ Animal
     cor         Text
     sexo        Text
     raca        Text
+    especieid   EspecieId
     deriving Show
 
 |]
@@ -71,3 +72,6 @@ instance YesodPersist App where
 
 instance RenderMessage App FormMessage where
     renderMessage _ _ = defaultFormMessage
+    
+widgetForm :: Route App -> Enctype -> Widget -> Text -> Widget
+widgetForm x enctype widget y = $(whamletFile "templates/form.hamlet")
