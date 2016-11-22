@@ -11,6 +11,8 @@ import Yesod.Static
 
 import Handler.Usuario
 import Handler.Contato
+import Handler.Especie
+
 ------------------
 mkYesodDispatch "App" resourcesApp
 

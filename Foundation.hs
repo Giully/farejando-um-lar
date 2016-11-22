@@ -28,6 +28,9 @@ Contato
     assunto  Text
     mensagem Text
     deriving Show
+Especie
+    nome  Text
+    deriving Show
 
 |]
 

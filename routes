@@ -8,3 +8,6 @@
 /contato/enviarMensagem          ContatoR         GET POST
 /contato/listagem                ListContatoR     GET
 /contato/apagar/#ContatoId       DelContatoR      POST
+/especie/cadastro                EspecieR         GET POST
+/especie/listagem                ListEspeciesR    GET
+/especie/apagar/#EspecieId       DelEspecieR      POST      

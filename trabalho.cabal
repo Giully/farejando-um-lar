@@ -9,7 +9,9 @@ executable          trabalho
   other-modules:    Foundation
                     Application
                     Handler.Usuario
-                    
+                    Handler.Contato
+                    Handler.Especie
+
   ghc-options:      -Wall -fwarn-tabs -O2
 
   build-depends:  base
