@@ -31,6 +31,13 @@ Contato
 Especie
     nome  Text
     deriving Show
+Animal
+    nome        Text
+    descricao   Text
+    cor         Text
+    sexo        Text
+    raca        Text
+    deriving Show
 
 |]
 
