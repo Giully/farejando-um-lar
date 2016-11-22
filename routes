@@ -1,0 +1,7 @@
+/                                HomeR            GET
+/usuario/cadastro                UsuarioR         GET POST
+/usuario/login                   LoginR           GET POST
+/usuario/perfil                  PerfilR          GET
+/logout                          LogoutR          POST
+/static                          StaticR          Static getStatic
+/farejandoumlar/sobre            SobreR           GET

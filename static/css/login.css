@@ -1,0 +1,61 @@
+*{margin:0}
+#logo
+{	
+	width:150px;
+	margin:auto;
+	margin-top: 20px;
+}
+#corpinho
+{
+	margin:auto;
+	width:1240px;
+}
+
+#login
+{ 
+margin:auto;
+padding-top:20px;
+width: 250px;
+height: 175px;
+margin-top:10px;	
+border-radius: 3px;
+background-color:#E7E6E5
+}
+input
+{ 	border-radius: 3px;
+	margin:5px;
+	margin-left:20px;
+	padding:2px;
+	height:30px;
+	width:200px;
+	border:1px solid #ccc;	
+	text-align:center; font-family: 'Roboto', sans-serif;
+}
+.botao {margin-left:23px; background-color: #ef914e; border:1px solid #ef914e;}
+
+#wasureta {font-size:14px; margin-top:2px; font-family: 'Roboto'; text-align: center; }
+
+p {text-align: center; font-family: 'Roboto', sans-serif; padding:5px; font-size:18px;}
+
+footer{width: 100%; position:fixed; bottom:0; height:20px; padding:5px; border-top:solid 1px #ef914e}
+ul, li
+{display:inline; font-family: 'Roboto', sans-serif; font-size:12px; padding:5px}
+a {text-decoration:none; color:#000000;}
+ul {margin: auto; width:1024px;}
+
+
+
+@media only screen and (max-width:450px){
+	
+	#corpinho{
+		width:100%;
+		margin:0 auto;
+	}
+	
+	#login{
+		width:100%;
+		margin:0 auto;
+	}
+	
+	#logo,#wasureta{margin:0 auto;}
+}

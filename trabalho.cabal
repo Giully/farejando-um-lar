@@ -1,0 +1,24 @@
+name:               trabalho
+version:            0.0.0
+cabal-version:      >= 1.8
+build-type:         Simple
+extra-source-files: routes
+
+executable          trabalho
+  main-is:          Main.hs
+  other-modules:    Foundation
+                    Application
+                    Handler.Usuario
+                    
+  ghc-options:      -Wall -fwarn-tabs -O2
+
+  build-depends:  base
+                , yesod
+                , yesod-static
+                , yesod-core
+                , text                          
+                , persistent                    
+                , persistent-postgresql
+                , monad-logger
+
+  ghc-options:    -threaded -O2 -rtsopts -with-rtsopts=-N

@@ -1,0 +1,26 @@
+    <footer>
+       <div class="menufooter">
+            <div class="submenufooter">
+                <h2>
+                    Farejar
+                <ul>
+                    <li>
+                        <a href="@{UsuarioR}">Encontre o animal desejado
+                    <li>
+                        <a href="@{UsuarioR}">Publique seu anuncio
+            <div class="submenufooter">
+                <h2>
+                    Contatos
+                <ul>
+                    <li>
+                        <a href="@{UsuarioR}">Mande-nos uma mensagem
+                    <li>
+                        <a href="@{UsuarioR}">Redes Sociais
+            <div class="submenufooter">
+                <h2>
+                    Cadastro
+                <ul>
+                    <li>
+                        <a href="@{UsuarioR}">Cadastre-se
+    <div id="copyright">
+        <p> Copyright &copy; 2016.  Todos os direitos reservados. </p>

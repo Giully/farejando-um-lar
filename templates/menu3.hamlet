@@ -1,0 +1,15 @@
+        <header>
+            <img src=@{StaticR img_logosite_jpg} class="logotipo">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="@{SobreR}"> Sobre
+                    <li>
+                        <a href="@{SobreR}">Mande-nos uma mensagem
+                    <li>
+                        <a href="@{SobreR}"> Farejar
+                    <li>
+                        <a href="@{SobreR}">Contatos
+                    <li>
+                        <button class="loginmenu">Login</button>
+        <main id="conteudo">

@@ -1,0 +1,33 @@
+                            p{
+                            	font-family: 'Open Sans', sans-serif;
+                            	font-size:16px;
+                            	text-align:left;;
+                            	
+                            }
+                            #contato{
+                            
+                            	width: 204px;
+                            }
+                            
+                            input {
+                            border:1px solid #ccc;	
+                            width:200px;	
+                            height:30px;	
+                            margin-bottom:3%;	
+                            text-align:center;	
+                            }
+                            
+                            textarea{
+                            border:1px solid #ccc;	
+                            width:200px;	
+                            height:150px;	
+                            margin-bottom:3%;	
+                            text-align:center;	
+                            }
+                            
+                            .enviar{
+                            	background-color:transparent;
+                            	width:200px;
+                            }
+
+	                     |]      

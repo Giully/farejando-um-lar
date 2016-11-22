@@ -1,0 +1,10 @@
+            <div id="corpinho" id="conteudo">
+                <br>
+                <br>
+                <br>
+                <br>
+                <p>Cadastre-se e comece agora:
+                <figure id="logo"><img src=@{StaticR img_logosite_jpg}>
+                <form action=@{UsuarioR} method=post enctype=#{enctype} id="login">
+                    ^{widget}
+                    <input type="submit" value="Cadastrar" class="botao" id="btnEntrar">

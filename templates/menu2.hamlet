@@ -1,0 +1,16 @@
+       <div id="menu">
+            <div class="mostrar">
+                <ul>
+                    <li>  
+                        <img src=@{StaticR img_logosite_jpg} class="logotipo">
+
+                    <li>
+                        <a href="@{SobreR}"> Sobre
+                    <li>
+                        <a href="@{UsuarioR}">Mande-nos uma mensagem
+                    <li>
+                        <a href="@{SobreR}"> Farejar
+                    <li>
+                        <a href="@{SobreR}">Contatos
+                  
+  
