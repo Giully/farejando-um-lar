@@ -21,6 +21,14 @@ Usuario
     email  Text
     senha  Text
     deriving Show
+Contato
+    nome     Text
+    email    Text
+    telefone Text
+    assunto  Text
+    mensagem Text
+    deriving Show
+
 |]
 
 mkYesodData "App" $(parseRoutesFile "routes")
@@ -32,6 +40,8 @@ instance Yesod App where
     
     isAuthorized LoginR _ = return Authorized
     isAuthorized UsuarioR _ = return Authorized
+    isAuthorized SobreR _ = return Authorized
+    isAuthorized ContatoR _ = return Authorized
     isAuthorized _ _ = estaAutenticado
 
 estaAutenticado :: Handler AuthResult

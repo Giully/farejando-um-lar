@@ -5,3 +5,6 @@
 /logout                          LogoutR          POST
 /static                          StaticR          Static getStatic
 /farejandoumlar/sobre            SobreR           GET
+/contato/enviarMensagem          ContatoR         GET POST
+/contato/listagem                ListContatoR     GET
+/contato/apagar/#ContatoId       DelContatoR      POST

@@ -10,7 +10,7 @@ import Yesod.Core
 import Yesod.Static
 
 import Handler.Usuario
-
+import Handler.Contato
 ------------------
 mkYesodDispatch "App" resourcesApp
 
