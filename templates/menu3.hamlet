@@ -1,7 +1,8 @@
         <header>
-            <img src=@{StaticR img_logosite_jpg} class="logotipo">
             <nav>
                 <ul>
+                    <li>
+                        <img src=@{StaticR img_logosite_jpg} class="logotipo">
                     <li>
                         <a href="@{SobreR}"> Sobre
                     <li>
@@ -12,4 +13,3 @@
                         <a href="@{SobreR}">Contatos
                     <li>
                         <button class="loginmenu">Login</button>
-        <main id="conteudo">

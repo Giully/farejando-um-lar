@@ -29,7 +29,7 @@ getContatoR = do
                         <br>
                         <p>Entre em contato com a gente preenchendo o formulário a seguir:
                         <br>
-                        <form method=post action=@{ContatoR} enctype=#{enctype} id="contato">
+                        <form method=post action=@{ContatoR} enctype=#{enctype}>
                             ^{widget}
                             <input type="submit" value="enviar" id="enviar">
                 |]
@@ -46,6 +46,7 @@ postContatoR = do
                     |]
                 _ -> redirect HomeR
 
+
 getListContatoR :: Handler Html
 getListContatoR = do
                 contatos <- runDB $ selectList [] [Asc ContatoNome]
@@ -57,7 +58,7 @@ getListContatoR = do
                     addScriptRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
                     addStylesheet $ StaticR css_menurodape_css
                     addStylesheet $ StaticR css_adocao_css
-                    $(whamletFile "templates/menu2.hamlet")
+                    $(whamletFile "templates/menu3.hamlet")
                     [whamlet|
                             <div class="container">
                                 <h2>Mensagens Recebida</h2>
@@ -83,8 +84,9 @@ getListContatoR = do
                                                 <td> <input type="submit" value="excluir">
                     
                     |]
-                    $(whamletFile "templates/menu2.hamlet")
-                
+                    $(whamletFile "templates/footer.hamlet")
+
+
 postDelContatoR :: ContatoId -> Handler Html
 postDelContatoR alid = do 
                 runDB $ delete alid

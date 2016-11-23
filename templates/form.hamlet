@@ -1,5 +1,8 @@
-<h1>
-    Cadastro de #{y}
-    <form method=post action=@{x} enctype=#{enctype}>
-        ^{widget}
-        <input type="submit" value="Cadastrar">
+<div class="row">
+    <div class="container">
+        <div id="formulario">
+            <p>
+                Cadastro de #{y}
+                <form method=post action=@{x} enctype=#{enctype}>
+                    ^{widget}
+                    <input type="submit" value="Cadastrar">

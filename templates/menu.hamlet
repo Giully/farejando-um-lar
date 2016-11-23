@@ -2,7 +2,7 @@
     <nav class="menu"> 
         <ul>
             <li>
-                <figure><a href="@{HomeR}"><img src=@{StaticR img_logosite_jpg} class="logotipo">
+                <a href="@{HomeR}"><img src=@{StaticR img_logosite_jpg} class="logotipo">
             <li>
                 <a href="@{SobreR}">Sobre
             <li>
