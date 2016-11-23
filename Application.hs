@@ -53,7 +53,6 @@ getHomeR = do
         addStylesheet $ StaticR css_estilo_css
         addStylesheet $ StaticR css_style_css
         addScriptRemote "https://code.jquery.com/jquery-3.1.1.min.js"
-        $(whamletFile "templates/menu3.hamlet")
         {-[whamlet|
 
             <ul>
@@ -64,6 +63,7 @@ getHomeR = do
                 $nothing
                     <li> <a href=@{LoginR}>Logar
         |]-}
+        $(whamletFile "templates/menu.hamlet")
         $(whamletFile "templates/index.hamlet")
         $(whamletFile "templates/footer.hamlet")
         

@@ -1,4 +1,4 @@
-            <video src=@{StaticR img_siames_jpg} type="video/mp4" id="bg-gato" muted loop autoplay >
+            <video src=@{StaticR img_introfarejando_mp4} type="video/mp4" id="bg-gato" muted loop autoplay >
 
        <div class="container_sessao1">
             <div class="container_sessao2">

@@ -10,3 +10,6 @@
 /contato/apagar/#ContatoId       DelContatoR      POST
 /especie/cadastro                EspecieR         GET POST
 /animal/cadastro                 AnimalR          GET POST
+/animal/listagem                 ListAnimalR      GET
+/animal/apagar/#AnimalId         DelAnimalR       POST
+/animal/perfil/#AnimalId         PerfilAniR       GET

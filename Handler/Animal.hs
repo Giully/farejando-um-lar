@@ -36,9 +36,47 @@ postAnimalR = do
             ((result, _), _) <- runFormPost formAnimal
             case result of
                 FormSuccess animal -> do
-                    alid <- runDB $ insert animal
+                    runDB $ insert animal
                     defaultLayout [whamlet|
-                        Animal cadastrado com sucesso #{fromSqlKey alid}!
+                        <h1> #{animalNome animal} inserido
                     |]
-                _ -> redirect HomeR
+                _ -> redirect AnimalR
+--http://www.yesodweb.com/book/persistent
+
+getListAnimalR :: Handler Html
+getListAnimalR = do
+                    animais <- runDB $ selectList [] [Asc AnimalNome]
+                    defaultLayout $ [whamlet|
+                        <h1> Animais Cadastrados:
+                        $forall Entity alid animal <- animais
+                            <a href=@{PerfilAniR  alid}><img src=@{StaticR img_dog_png}>
+                            #{animalNome animal} 
+                            #{animalDescricao animal}
+                            #{animalCor animal} 
+                            #{animalSexo animal}
+                            #{animalRaca animal} 
+                            <form method=post action=@{DelAnimalR alid}> 
+                                <input type="submit" value="Deletar"><br>
+                    |] 
+-- stack clean 
+-- rm -Rf .stack-work
+getPerfilAniR :: AnimalId -> Handler Html
+getPerfilAniR alid = do
+                        animal <- runDB $ get404 alid 
+                        especies <- runDB $ get404 (animalEspecieid animal)
+                        defaultLayout [whamlet| 
+                            <h1>#{animalNome animal}
+                            <p> Descricao: #{animalDescricao animal}
+                            <p> Cor: #{animalCor animal}
+                            <p> Raca: #{animalRaca animal}
+                            <p> Especie: #{especieNome especies}
+            
+                         |]
+
+postDelAnimalR :: AnimalId -> Handler Html
+postDelAnimalR alid = do
+     runDB $ delete alid
+     redirect AnimalR
+
+
 

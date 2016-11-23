@@ -1,7 +1,8 @@
 <header>
-    <figure><a href="@{HomeR}"><img src=@{StaticR img_logosite_jpg} class="logotipo">
     <nav class="menu"> 
         <ul>
+            <li>
+                <figure><a href="@{HomeR}"><img src=@{StaticR img_logosite_jpg} class="logotipo">
             <li>
                 <a href="@{SobreR}">Sobre
             <li>
@@ -10,14 +11,4 @@
                 <a href="@{UsuarioR}">Cadastro
             <li>
                 <a href="@{LoginR}">Login
-    <div id="menu" style="display:none;">
-        <a href="index.php"><img src=@{StaticR img_Penguins_jpg} style="height:75px; margin-left:6%;" /></a>
-        <ul>
-            <li style="list-style: none">
-                <a href="@{SobreR}">Sobre
-            <li style="list-style: none">
-                <a href="@{SobreR}">Sobre
-            <li style="list-style: none">
-                <a href="@{SobreR}">Sobre
-            
-            
+
