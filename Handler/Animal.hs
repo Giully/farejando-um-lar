@@ -92,6 +92,29 @@ getPerfilAniR alid = do
             
                             |]
                             $(whamletFile "templates/footer.hamlet")
+                            
+getListAdotarR :: Handler Html
+getListAdotarR = do
+                    animais <- runDB $ selectList [] [Asc AnimalNome]
+                    defaultLayout $ do
+                        addStylesheet $ StaticR css_menurodape_css
+                        addStylesheet $ StaticR css_animal_css
+                        $(whamletFile "templates/menu3.hamlet")
+                        [whamlet|
+                            --<div class="row">
+                            --    <div class="container">
+                            <h1> Animais Disponíveis para adoção:
+                            <div class="animal">
+                            $forall Entity alid animal <- animais
+                                <a href=@{PerfilAniR  alid}><img src=@{StaticR img_dog_png} class="imgAnimal">
+                                    <div class="descricao">
+                                        <b>Nome:</b>#{animalNome animal}<br>
+                                        <b>Descrição:</b>#{animalDescricao animal}<br>
+                                        <b>Cor:</b>#{animalCor animal}<br>
+                                        <b>Sexo:</b>#{animalSexo animal}<br>
+                                        <b>Raca:</b>#{animalRaca animal}<br> 
+                        |]
+                        $(whamletFile "templates/footer.hamlet")
 
 postDelAnimalR :: AnimalId -> Handler Html
 postDelAnimalR alid = do

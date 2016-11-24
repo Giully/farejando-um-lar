@@ -15,3 +15,4 @@
 /animal/listagem                 ListAnimalR      GET
 /animal/apagar/#AnimalId         DelAnimalR       POST
 /animal/perfil/#AnimalId         PerfilAniR       GET
+/adocao/animaisdisponiveis       ListAdotarR      GET
