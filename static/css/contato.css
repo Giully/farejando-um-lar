@@ -1,9 +1,4 @@
-                            p{
-                            	font-family: 'Open Sans', sans-serif;
-                            	font-size:16px;
-                            	text-align:left;;
-                            	
-                            }
+
                             #contato{
                             
                             	width: 204px;
@@ -30,4 +25,29 @@
                             	width:200px;
                             }
 
-	                     |]      
+	                    .position2{ 
+                            	float:right;
+                            	margin-left: 20px;
+                            	margin-right:25px;
+
+
+                        }
+                        h1{
+                              
+                            font-family: 'Open Sans';
+                        	text-align: center;
+                        	margin-top:200px;
+                        	width:550px; 
+                            
+                        }
+                        .text{
+                            
+                            font-family: 'Open Sans';
+                        	font-size: 25px;
+                        	text-align: center;
+                        	margin-top:50px;
+                        	width:550px;
+                        }
+                        .imgsucesso2{
+                            margin:0 auto;
+                        }

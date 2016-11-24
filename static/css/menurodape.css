@@ -27,6 +27,7 @@ a{
 	text-decoration:none;
 	color:#fff;
 	font-weight:500;
+	padding-top:25%;
 }
 
 h5{
@@ -109,7 +110,6 @@ footer
 .menufooter >.submenufooter >ul{
 	width: 50%;	
 	border-left:3px solid #e65100;
-	margin-left:40%;
 }
 
 .menufooter >.submenufooter >ul>li{
@@ -205,25 +205,26 @@ display:none;}
 /* MENU -------------------------------------------------------------------------------------------------------------*/
 header{ 
 width:100%;
-background-color:rgba(235,118,35,1);
+height:100px;
+/*background-color:rgba(235,118,35,1);*/
+background-color:green;
 margin:auto;
 position:fixed;
 opacity: 0.90;
 z-index:4;
 top:0;
-padding: 100px;
 }
 
 .logo{ float:left;
 position:fixed;
 margin-left:27px;
-margin-top:-30px;
+margin-top:30px;
 
 }
 
 a:link{
     color: #eee;
-text-decoration:none;
+	text-decoration:none;
 	 }
 
 /*NAV FIXA*/	
@@ -233,9 +234,7 @@ text-decoration:none;
 	z-index:99999;
 	position:fixed;
 	top:0;
-	padding:9px;	
 	width:100%;
-	height:70px;
 	background-color:rgba(235,118,35,1);
 	-webkit-box-shadow: 0px 0px 13px 0px rgba(5,5,5,0.54);
 	-moz-box-shadow: 0px 0px 13px 0px rgba(5,5,5,0.54);
@@ -252,7 +251,7 @@ text-decoration:none;
 }
 
 li{
-
+	margin-top: 40px;
 }
 
 
@@ -262,6 +261,8 @@ li{
     margin:20px;
 	text-decoration:none;
 	display: inline;
+	border:2px solid green;
+	padding-bottom:50%;
 }
 
 .mostrar > ul > a:hover{
@@ -281,7 +282,7 @@ nav li
 	{
 	   display:inline;
 		font-family: 'Open Sans', sans-serif;
-		margin: 10px;
+		margin: 30px;
 		padding-left: 30px;
 	}
 
@@ -339,39 +340,8 @@ nav ul{
 	
 }
 
-/*FIM NAV FIXA*/
-/*a:hover{
-color: #61a2e6;
-background-color:#e3e6ee;
-
-}*/
-
-/*	
-nav {
-	font-family:'Roboto Condensed', sans-serif;
-	text-align:center;
-	font-size:17px;
-	letter-spacing:1px;
-	text-align: center;
-	padding-top:15px;
-}
-
-nav a {
-	color: #2c3e50;
-	padding: 37px 25px 30px 25px;
-}
-nav>ul>li {
-    display: inline;
-}
-a {
-    color: blue;
-}
-/*FIM: MODIFICAÇOES*/
-
 /*CONTATO*/
-#conteudo{ margin-top:300px;
+/*#conteudo{ margin-top:300px;
 }
+*/
 
-imgAnimal{
-	width:90px;
-}

@@ -2,14 +2,10 @@
             <nav>
                 <ul>
                     <li>
-                        <img src=@{StaticR img_logosite_jpg} class="logotipo">
+                        <a href="@{HomeR}"> Home
                     <li>
-                        <a href="@{SobreR}"> Sobre
+                        <a href="@{SobreR}">Sobre
                     <li>
-                        <a href="@{SobreR}">Mande-nos uma mensagem
+                        <a href="@{ListAnimalR}"> Adoção
                     <li>
-                        <a href="@{SobreR}"> Farejar
-                    <li>
-                        <a href="@{SobreR}">Contatos
-                    <li>
-                        <button class="loginmenu">Login</button>
+                        <a href="@{ContatoR}">Contatos

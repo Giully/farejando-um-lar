@@ -37,9 +37,13 @@ postAnimalR = do
             case result of
                 FormSuccess animal -> do
                     runDB $ insert animal
-                    defaultLayout [whamlet|
-                        <h1> #{animalNome animal} inserido
-                    |]
+                    defaultLayout $ do
+                        addStylesheet $ StaticR css_menurodape_css
+                        $(whamletFile "templates/menu3.hamlet")
+                        [whamlet|
+                            <h1> #{animalNome animal} foi inserido com sucesso
+                        |]
+                        $(whamletFile "templates/footer.hamlet")
                 _ -> redirect AnimalR
 --http://www.yesodweb.com/book/persistent
 
@@ -48,22 +52,23 @@ getListAnimalR = do
                     animais <- runDB $ selectList [] [Asc AnimalNome]
                     defaultLayout $ do
                         addStylesheet $ StaticR css_menurodape_css
+                        addStylesheet $ StaticR css_animal_css
                         $(whamletFile "templates/menu3.hamlet")
                         [whamlet|
-                            <div class="row">
-                                <div class="container">
-                                    <h1> Animais Cadastrados:
-                                    $forall Entity alid animal <- animais
-                                        <a href=@{PerfilAniR  alid}><img src=@{StaticR img_dog_png} class="imgAnimal">
-                                        <div class="animal">
-                                            <div class="descricao">
-                                                <b>Nome:</b>#{animalNome animal}<br>
-                                                <b>Descrição:</b>#{animalDescricao animal}<br>
-                                                <b>Cor:</b>#{animalCor animal}<br>
-                                                <b>Sexo:</b>#{animalSexo animal}<br>
-                                                <b>Raca:</b>#{animalRaca animal}<br> 
-                                                <form method=post action=@{DelAnimalR alid}> 
-                                                    <input type="submit" value="Deletar"><br>
+                            --<div class="row">
+                            --    <div class="container">
+                            <h1> Animais Cadastrados:
+                            <div class="animal">
+                            $forall Entity alid animal <- animais
+                                <a href=@{PerfilAniR  alid}><img src=@{StaticR img_dog_png} class="imgAnimal">
+                                    <div class="descricao">
+                                        <b>Nome:</b>#{animalNome animal}<br>
+                                        <b>Descrição:</b>#{animalDescricao animal}<br>
+                                        <b>Cor:</b>#{animalCor animal}<br>
+                                        <b>Sexo:</b>#{animalSexo animal}<br>
+                                        <b>Raca:</b>#{animalRaca animal}<br> 
+                                        <form method=post action=@{DelAnimalR alid}> 
+                                            <input type="submit" value="Deletar"><br>
                         |]
                         $(whamletFile "templates/footer.hamlet")
 -- stack clean 
@@ -72,17 +77,21 @@ getPerfilAniR :: AnimalId -> Handler Html
 getPerfilAniR alid = do
                         animal <- runDB $ get404 alid 
                         especies <- runDB $ get404 (animalEspecieid animal)
-                        defaultLayout [whamlet| 
-                            <div class="row">
-                                <div class="container">
-                                    <a href=@{PerfilAniR  alid}><img src=@{StaticR img_dog_png}>
-                                    <p>#{animalNome animal}
-                                    <p> Descricao: #{animalDescricao animal}
-                                    <p> Cor: #{animalCor animal}
-                                    <p> Raca: #{animalRaca animal}
-                                    <p> Especie: #{especieNome especies}
+                        defaultLayout $ do
+                            addStylesheet $ StaticR css_menurodape_css
+                            $(whamletFile "templates/menu3.hamlet")
+                            [whamlet| 
+                                <div class="row">
+                                    <div class="container">
+                                        <a href=@{PerfilAniR  alid}><img src=@{StaticR img_dog_png}>
+                                        <p>#{animalNome animal}
+                                        <p> Descricao: #{animalDescricao animal}
+                                        <p> Cor: #{animalCor animal}
+                                        <p> Raca: #{animalRaca animal}
+                                        <p> Especie: #{especieNome especies}
             
-                         |]
+                            |]
+                            $(whamletFile "templates/footer.hamlet")
 
 postDelAnimalR :: AnimalId -> Handler Html
 postDelAnimalR alid = do

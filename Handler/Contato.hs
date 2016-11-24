@@ -19,20 +19,11 @@ formContato = renderDivs $ Contato
 getContatoR :: Handler Html
 getContatoR = do
             (widget, enctype) <- generateFormPost formContato
-            defaultLayout $ do   
+            defaultLayout $ do
                 addStylesheet $ StaticR css_menurodape_css
                 addStylesheet $ StaticR css_adocao_css
                 $(whamletFile "templates/menu3.hamlet")
-                [whamlet|
-                    <div id="formulario">
-                        <h1> Contato
-                        <br>
-                        <p>Entre em contato com a gente preenchendo o formulário a seguir:
-                        <br>
-                        <form method=post action=@{ContatoR} enctype=#{enctype}>
-                            ^{widget}
-                            <input type="submit" value="enviar" id="enviar">
-                |]
+                widgetForm ContatoR enctype widget "Contato"
                 $(whamletFile "templates/footer.hamlet")
 
 postContatoR :: Handler Html
@@ -40,13 +31,21 @@ postContatoR = do
             ((result, _), _) <- runFormPost formContato
             case result of
                 FormSuccess contato -> do
-                    alid <- runDB $ insert contato
-                    defaultLayout [whamlet|
-                        Contato feito com sucesso #{fromSqlKey alid}!
-                    |]
-                _ -> redirect HomeR
+                    runDB $ insert contato
+                    defaultLayout $ do
+                        setTitle "Farejando um lar"
+                        addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+                        addStylesheet $ StaticR css_contato_css
+                        addStylesheet $ StaticR css_menurodape_css
+                        $(whamletFile "templates/menu3.hamlet")
+                        [whamlet|
+                            <div class="row">
+                                <div class="container">
+                                    <img src=@{StaticR img_sucesso_png} class="imgSucesso2">
 
-
+                        |]
+                        $(whamletFile "templates/footer.hamlet")
+                _ -> redirect AnimalR
 getListContatoR :: Handler Html
 getListContatoR = do
                 contatos <- runDB $ selectList [] [Asc ContatoNome]

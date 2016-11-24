@@ -47,11 +47,7 @@ getHomeR = do
                 	width:40px;
                 }
         |]
-        addStylesheet $ StaticR css_responsividade_css
-        addStylesheet $ StaticR css_farejar_css
         addStylesheet $ StaticR css_menurodape_css
-        addStylesheet $ StaticR css_estilo_css
-        addStylesheet $ StaticR css_style_css
         addScriptRemote "https://code.jquery.com/jquery-3.1.1.min.js"
         {-[whamlet|
 
