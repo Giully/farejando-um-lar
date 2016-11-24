@@ -11,6 +11,7 @@ executable          trabalho
                     Handler.Usuario
                     Handler.Contato
                     Handler.Especie
+                    Handler.Animal
 
   ghc-options:      -Wall -fwarn-tabs -O2
 

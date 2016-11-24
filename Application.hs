@@ -14,7 +14,6 @@ import Handler.Contato
 import Handler.Especie
 import Handler.Animal
 
-
 ------------------
 mkYesodDispatch "App" resourcesApp
 

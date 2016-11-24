@@ -42,7 +42,6 @@ postContatoR = do
                             <div class="row">
                                 <div class="container">
                                     <img src=@{StaticR img_sucesso_png} class="imgSucesso2">
-
                         |]
                         $(whamletFile "templates/footer.hamlet")
                 _ -> redirect AnimalR
@@ -90,5 +89,6 @@ postDelContatoR :: ContatoId -> Handler Html
 postDelContatoR alid = do 
                 runDB $ delete alid
                 redirect ContatoR
+                
                 
               
