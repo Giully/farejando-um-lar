@@ -46,8 +46,8 @@ getHomeR = do
                 	width:40px;
                 }
         |]
-        addStylesheet $ StaticR css_menurodape_css
         addScriptRemote "https://code.jquery.com/jquery-3.1.1.min.js"
+        addStylesheet $ StaticR css_menurodape_css
         {-[whamlet|
 
             <ul>

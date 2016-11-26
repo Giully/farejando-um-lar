@@ -1,4 +1,10 @@
 <header>
+  <div class="container">
+            <header id="header" class="row">
+                <div class="col-md-4 col-xs-6">
+                    <a href=@{HomeR}><img src=@{StaticR img_logosite_jpg} class="img-responsive">
+
+    
     <nav class="menu"> 
         <ul>
             <li>

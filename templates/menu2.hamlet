@@ -1,16 +1,28 @@
-       <div id="menu">
-            <div class="mostrar">
-                <ul>
-                    <li>  
-                        <img src=@{StaticR img_logosite_jpg} class="logotipo">
+        <header id="header">
 
-                    <li>
-                        <a href="@{SobreR}"> Sobre
-                    <li>
-                        <a href="@{UsuarioR}">Mande-nos uma mensagem
-                    <li>
-                        <a href="@{SobreR}"> Farejar
-                    <li>
-                        <a href="@{SobreR}">Contatos
-                  
-  
+        <nav class="navbar">
+            <div class="navbar-left">
+                 <a href=@{HomeR}><img src=@{StaticR img_logohorizontal_svg} class="img-responsive">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href=@{AnimalR}>Cadastrar Animal
+                
+                <li>
+                    <a href=@{ListAnimalR}> Animais cadastrados
+                
+                <li>
+                    <a href=@{ListContatoR}> Visualizar Mensagens
+                <li>
+                    <a href=@{UsuarioR}> Cadastrar novo usuário
+                <li>
+                    <a href=@{EspecieR}>Cadastrar Especie
+                <li>
+                    <a href=@{ListarR}> Visualizar Especies
+                <li>
+                    <form action=@{LogoutR} method=post class="loginmenu">
+                        <input type="submit" value="Logout">
+
+
+
+

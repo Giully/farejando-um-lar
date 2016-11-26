@@ -52,9 +52,11 @@ instance Yesod App where
     authRoute _ = Just LoginR
     
     isAuthorized LoginR _ = return Authorized
-    isAuthorized UsuarioR _ = return Authorized
     isAuthorized SobreR _ = return Authorized
     isAuthorized ContatoR _ = return Authorized
+    isAuthorized ListAdotarR _ = return Authorized
+    isAuthorized HomeR _ = return Authorized
+    isAuthorized UsuarioR _ = return Authorized
     isAuthorized _ _ = estaAutenticado
 
 estaAutenticado :: Handler AuthResult

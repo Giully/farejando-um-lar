@@ -1,11 +1,18 @@
-        <header>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="@{HomeR}"> Home
-                    <li>
-                        <a href="@{SobreR}">Sobre
-                    <li>
-                        <a href="@{ListAnimalR}"> Adoção
-                    <li>
-                        <a href="@{ContatoR}">Contatos
+        <header id="header">
+
+        <nav class="navbar">
+            <div class="navbar-left">
+                 <a href=@{HomeR}><img src=@{StaticR img_logohorizontal_svg} class="img-responsive">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href=@{HomeR}> Home
+                <li>
+                    <a href=@{SobreR}> Sobre a Farejando um Lar
+                <li>
+                    <a href=@{ListAdotarR}> Animais para Adoção
+                
+                <li>
+                    <a href=@{ContatoR}> Entrar em Contato
+                <li>
+                    <a href=@{LoginR}>Administrador

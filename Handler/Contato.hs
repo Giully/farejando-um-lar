@@ -51,9 +51,6 @@ getListContatoR = do
                 defaultLayout $ do
                     setTitle "Farejando um lar"
                     addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-                    addStylesheetRemote "https://fonts.googleapis.com/css?family=Raleway"
-                    addScriptRemote "https://code.jquery.com/jquery-3.1.1.min.js"
-                    addScriptRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
                     addStylesheet $ StaticR css_menurodape_css
                     addStylesheet $ StaticR css_adocao_css
                     $(whamletFile "templates/menu3.hamlet")

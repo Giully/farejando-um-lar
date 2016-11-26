@@ -1,9 +1,9 @@
         <main id="sobre" id="conteudo">
             <div class="row">
                 <div class="container">
-                    <h1> _{MsgHello}
+                    <h1> _{MsgSobre}
                     <p class="text-justify">
-                        A ONG DVA (defesa da vida animal) tem o objetivo de tornar Santos cidade referência
+                        A ONG farejando um lar tem o objetivo de tornar Santos cidade referência
                         na qualidade da vida animal. Para isso, fazemos o maior numero de castrações possiveis
                         para diminuiro numero de nascimentos e consequentemente o abandono.
                         Também fazemos atendimentos de emergencia para população de baixa renda para evitar

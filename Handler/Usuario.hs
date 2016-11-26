@@ -166,7 +166,7 @@ postUsuarioR = do
             defaultLayout [whamlet|
                 Usuárix cadastrado com e-mail #{usuarioEmail user}
             |]
-        _ -> redirect HomeR
+        _ -> redirect ListAnimalR
 
 -- ROTA DE AUTENTICACAO
 postLoginR :: Handler Html

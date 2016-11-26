@@ -39,7 +39,7 @@ postAnimalR = do
                     runDB $ insert animal
                     defaultLayout $ do
                         addStylesheet $ StaticR css_menurodape_css
-                        $(whamletFile "templates/menu3.hamlet")
+                        $(whamletFile "templates/menu2.hamlet")
                         [whamlet|
                             <h1> #{animalNome animal} foi inserido com sucesso
                         |]
@@ -53,7 +53,7 @@ getListAnimalR = do
                     defaultLayout $ do
                         addStylesheet $ StaticR css_menurodape_css
                         addStylesheet $ StaticR css_animal_css
-                        $(whamletFile "templates/menu3.hamlet")
+                        $(whamletFile "templates/menu2.hamlet")
                         [whamlet|
                             --<div class="row">
                             --    <div class="container">

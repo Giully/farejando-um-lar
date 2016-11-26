@@ -63,14 +63,16 @@ p{
 	text-align:center;	
 }
 
+
 h1{ 
 	font-size:58px;
-	font-family: 'Amatic SC', cursive;
+	font-family: "Arial";
 	color:#6d4c41;
 	text-align:center;
 	margin-bottom:-1%;
 	margin-top:13%;
 }
+
 
 h3{ 
 	font-size:58px;

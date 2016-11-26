@@ -31,7 +31,7 @@ postEspecieR = do
                         runDB $ insert especie
                         defaultLayout $ do
                             addStylesheet $ StaticR css_menurodape_css
-                            $(whamletFile "templates/menu3.hamlet")
+                            $(whamletFile "templates/menu2.hamlet")
                             [whamlet|
                                 <h1> #{especieNome especie} Inserido com sucesso. 
                             |]
@@ -47,7 +47,7 @@ getListarR = do
                  addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
                  addStylesheet $ StaticR css_menurodape_css
                  addStylesheet $ StaticR css_adocao_css
-                 $(whamletFile "templates/menu3.hamlet")
+                 $(whamletFile "templates/menu2.hamlet")
                  [whamlet|
                  <div class="row">
                      <div class="container">
