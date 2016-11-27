@@ -1,0 +1,282 @@
+
+*{    overflow-x: hidden;
+}
+
+header{ 
+
+}
+
+.logo{ 
+    float:left;
+	position:static;
+	margin-left:30px;
+	margin-top:1%;
+}
+
+nav{
+	position:static;
+	top:0;
+	padding-left:9px;	
+	width:100%;
+	height:70px;
+	background-color:rgba(235,118,35,1);
+
+}
+
+li{list-style-type:none; display:inline;}	
+	
+	
+nav li a 
+	{
+		font-family: 'Roboto Slab', serif;
+	    color: #eee;
+		font-size:16px;
+	    margin: 5% 4%;
+		text-decoration:none;
+	}
+		
+
+a 	{
+	color:white;
+}
+
+
+nav ul{
+	padding-left:5%;
+	padding-top:1%;
+	text-align: center;
+	}	
+
+
+nav li{	display:inline;
+}
+
+/**/
+
+section{
+	width: 40%;
+	height: 255px;
+	background-color: #fafafa;
+	border-radius: 5%;
+	box-shadow: 3px 3px 10px 4px rgba(217,204,217,0.67);
+	float: left;
+	margin: 2.5% 5% 2.5% 5%;
+	moz-box-shadow: 3px 3px 10px 4px rgba(217,204,217,0.67);
+	position: relative;
+	webkit-box-shadow: 3px 3px 10px 4px rgba(217,204,217,0.67);
+}
+
+section>h1{
+	color: #ed8338;
+	font-family: 'Amatic SC', cursive;
+	font-size: 62px;
+	margin-bottom: -10%;
+	margin-left: 60%;
+}
+
+section>p{
+	color: #795548;
+	font-family: 'Open Sans';
+	font-size: 14px;
+	margin: -20% 22% 10% 42%;
+	padding: 5%;
+	text-align: center;
+	width: 50%;
+}
+.imagemsection{
+	margin-left: 3%;
+	margin-top: 2%;
+	max-width: 70%;
+	min-width: 30%;
+	opacity: 0.8;
+	width: 163px;
+}
+.imagemsection:hover{
+	opacity: 1;
+}
+
+
+/*DEFAULT*/
+*{
+	margin:0;
+	padding:0;
+	font-family: 'Roboto', sans-serif;
+	}
+
+.logotipo{
+	display:none;	
+}
+
+figure{
+	width:150px;
+	height:400px;
+	position:absolute;
+	z-index:3;
+	margin-left:15%;
+	margin-top:0%;
+	}
+
+
+a{
+	font-size:14px;
+	text-decoration:none;
+	color:#fff;
+	font-weight:500;
+}
+
+h5{
+	font-size:14px;
+	text-decoration:none;
+	color:#fff;
+	font-weight:300;
+}
+
+
+#login{
+		display:none;
+	    width:13%;
+		height:205px;
+		position:fixed;
+		z-index:99999;
+		top:4.5%;
+		right:15%;
+		text-align:center;
+		background-color:rgba(114,76,78,0.6);
+		border-radius:15px;
+        -moz-box-shadow: 4px 10px 18px #000000;
+        -webkit-box-shadow: 4px 10px 18px #000000;
+        box-shadow: 4px 10px 18px #000000;
+		}	
+/*FIM LOGIN*/	
+
+
+
+.loginmenu
+	{
+		width:30px;
+		top:0%;
+		right:18%;
+		font-family: 'Amatic SC', cursive;
+		font-weight:bold;
+		color:#eee;
+		font-size:26px;
+		border: none;
+		border-bottom: 6px solid #4e342e;
+	 	background: #795548;
+		border-radius: 10px;
+}
+	
+.loginmenu:active{
+	border-bottom: 0;
+	box-shadow: none;
+	-webkit-transition: all 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+    -moz-transition: all 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+    -o-transition: all 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+    transition: all 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+}
+
+
+#login input{
+	width:65%;
+	height:auto;
+	text-align: center;
+	padding:2% 5% 2% 5%;
+	margin: 0 auto;
+	margin-bottom:7%;	
+}
+
+.botao{
+	background-color:transparent;
+	font-family: 'Roboto';
+	border:2px solid #eee;
+	border-radius:5px;
+	color:#404040;
+}
+
+
+
+.bg-gato{
+	width: 100%;
+	height:auto;
+	position: relative;
+	z-index: 1;	
+	margin: 0;
+	padding:0;
+}
+
+
+
+/**/
+/*footer*/
+footer{
+	background-color: #ed8338;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+#copyright{
+	background-color: #ef914e;
+	float: left;
+	width: 100%;
+}
+#copyright>p{
+	color: #eee;
+	font-size: 12px;
+	padding: 1%;
+	text-align: center;
+}
+.social{
+	margin: auto;
+	margin-right: 2%;
+	margin-top: 10%;
+	padding: 2%;
+	position: relative;
+	text-align: center;
+}
+.social>a>i{
+	font-size: 38px;
+	letter-spacing: 10px;
+}
+.menufooter{
+	position: relative;
+	width: 100%;
+}
+.menufooter >.submenufooter{
+	float: left;
+	position: relative;
+	width: 33.3%;
+}
+.menufooter >.submenufooter >ul{
+	border-left: 3px solid #e65100;
+	margin-left: 40%;
+	width: 50%;
+}
+.menufooter >.submenufooter >ul>li{
+	list-style: none;
+	margin: 5%;
+}
+.menufooter>.submenufooter>ul>li>a{
+	color: #5d4037;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+.menufooter>.submenufooter>h2>i{
+	font-size: 29px;
+	letter-spacing: 5px;
+}
+.menufooter>.submenufooter>h2{
+	color: #fff;
+	font-family:  'Amatic SC', cursive;
+	font-size: 40px;
+	font-weight: 200;
+	margin: 3% 10%;
+	text-align: center;
+}
+
+.menu_responsivo,.nav_responsiva{
+	display: none;
+}

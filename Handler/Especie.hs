@@ -12,7 +12,7 @@ import Database.Persist.Postgresql
 formEspecie :: Form Especie
 formEspecie = renderDivs $ Especie <$>
            areq textField FieldSettings{fsId=Just "hident2",
-           fsLabel="Especie",
+           fsLabel="Especie: ",
            fsTooltip= Nothing,
            fsName= Nothing,
            fsAttrs=[("maxlength","20")]} Nothing
@@ -20,8 +20,15 @@ formEspecie = renderDivs $ Especie <$>
 getEspecieR :: Handler Html
 getEspecieR = do
             (widget, enctype) <- generateFormPost formEspecie
-            defaultLayout $ widgetForm EspecieR enctype widget "Especie"
-
+            defaultLayout $ do
+                addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+                addStylesheet $ StaticR css_menurodape_css
+                addStylesheet $ StaticR css_adocao_css
+                addStylesheetRemote "https://fonts.googleapis.com/css?family=Amatic+SC"
+                addStylesheetRemote "https://fonts.googleapis.com/css?family=Open+Sans"                  
+                $(whamletFile "templates/menu2.hamlet")
+                widgetForm EspecieR enctype widget "Especie"
+                $(whamletFile "templates/footer.hamlet")
 
 postEspecieR :: Handler Html
 postEspecieR = do
@@ -30,7 +37,10 @@ postEspecieR = do
                     FormSuccess especie -> do
                         runDB $ insert especie
                         defaultLayout $ do
+                            addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
                             addStylesheet $ StaticR css_menurodape_css
+                            addStylesheetRemote "https://fonts.googleapis.com/css?family=Amatic+SC"
+                            addStylesheetRemote "https://fonts.googleapis.com/css?family=Open+Sans"                              
                             $(whamletFile "templates/menu2.hamlet")
                             [whamlet|
                                 <h1> #{especieNome especie} Inserido com sucesso. 
@@ -45,8 +55,9 @@ getListarR = do
              defaultLayout $ do
                  setTitle "Farejando um lar"
                  addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+                 addStylesheetRemote "https://fonts.googleapis.com/css?family=Amatic+SC"
+                 addStylesheetRemote "https://fonts.googleapis.com/css?family=Open+Sans"  
                  addStylesheet $ StaticR css_menurodape_css
-                 addStylesheet $ StaticR css_adocao_css
                  $(whamletFile "templates/menu2.hamlet")
                  [whamlet|
                  <div class="row">

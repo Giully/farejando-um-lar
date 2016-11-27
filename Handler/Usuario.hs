@@ -10,16 +10,18 @@ import Data.Text
 import Control.Applicative
 import Database.Persist.Postgresql
 
+
+
 formUser :: Form Usuario
 formUser = renderDivs $ Usuario
-    <$> areq textField     "Nome"    Nothing
-    <*> areq emailField    "E-mail"  Nothing
+    <$> areq emailField    "E-mail"  Nothing
     <*> areq passwordField "Senha"   Nothing
 
 getLoginR :: Handler Html
 getLoginR = do
     (widget,enctype)<- generateFormPost formUser
     defaultLayout $ do
+        addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         toWidget [lucius|
             	*{margin:0}
             	#logo
@@ -71,7 +73,7 @@ getLoginR = do
         |]
         [whamlet|
             <div id="corpinho">
-                <p>Faça o Login para acessar o Farejand um Lar
+                <p>Área administrativa, para acessar se autentique no sistema:
                 <figure id="logo"><img src=@{StaticR img_logosite_jpg}>
                 <form action=@{LoginR} method=post enctype=#{enctype} id="login">
                     ^{widget}
@@ -83,8 +85,11 @@ getUsuarioR :: Handler Html
 getUsuarioR = do
     (widget,enctype)<- generateFormPost formUser
     defaultLayout $ do
+        addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         toWidget [lucius|
-            	*{margin:0}
+                *{
+                margin:0
+                }
             	#logo
             	{	
             		width:150px;
@@ -117,18 +122,28 @@ getUsuarioR = do
             		border:1px solid #ccc;	
             		text-align:center; font-family: 'Roboto', sans-serif;
             	}
-            	.botao {margin-left:23px; background-color: #ef914e; border:1px solid #ef914e;}
+            	.botao {
+            	    margin-left:23px; 
+            	    background-color: #ef914e;
+            	    border:1px solid #ef914e;
+            	    
+            	}
             	
-            	#wasureta {font-size:14px; margin-top:2px; font-family: 'Roboto'; text-align: center; }
+            	#wasureta {
+            	    font-size:14px;
+            	    margin-top:2px; 
+            	    font-family: 'Roboto';
+            	    text-align: center;
+            	    }
             	
-            	p {text-align: center; font-family: 'Roboto', sans-serif; padding:5px; font-size:18px;}
-            	
-            	footer{width: 100%; position:fixed; bottom:0; height:20px; padding:5px; border-top:solid 1px #ef914e}
-            	ul, li
-            	{display:inline; font-family: 'Roboto', sans-serif; font-size:12px; padding:5px}
-            	a {text-decoration:none; color:#000000;}
-            	ul {margin: auto; width:1024px;}
-            	
+            	p {
+            	    text-align: center; 
+            	    font-family: 'Roboto',
+            	    sans-serif; padding:5px; 
+            	    font-size:18px;
+            	   
+            	}
+
             	
             	
             	@media only screen and (max-width:450px){
@@ -144,12 +159,11 @@ getUsuarioR = do
             		}
             		
             		#logo,#wasureta{margin:0 auto;}
-	            }  
+	            }      
 	    |]
-        $(whamletFile "templates/menu3.hamlet")
         [whamlet|
             <div id="corpinho">
-                <p>Cadastre-se e comece agora:
+                <p>Cadastrar um novo usuario no sitema:
                 <figure id="logo"><img src=@{StaticR img_logosite_jpg}>
                 <form action=@{UsuarioR} method=post enctype=#{enctype} id="login">
                     ^{widget}
@@ -163,9 +177,13 @@ postUsuarioR = do
     case resultado of
         FormSuccess user -> do
             uid <- runDB $ insert user
-            defaultLayout [whamlet|
-                Usuárix cadastrado com e-mail #{usuarioEmail user}
-            |]
+            defaultLayout $ do
+                addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+                $(whamletFile "templates/menu3.hamlet")
+                [whamlet|
+                O Usuário com email #{usuarioEmail user}, foi cadastrado com sucesso.
+                |]
+                $(whamletFile "templates/footer.hamlet")
         _ -> redirect ListAnimalR
 
 -- ROTA DE AUTENTICACAO
@@ -186,11 +204,34 @@ postLoginR = do
 getPerfilR :: Handler Html
 getPerfilR = do
     userId <- lookupSession "_ID"
-    defaultLayout [whamlet|
-        <h1> Logadoooo!!!! #{show userId}
-    |]
+    defaultLayout $ do
+        addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        addStylesheet $ StaticR css_menurodape_css
+        addStylesheet $ StaticR css_adocao_css
+        $(whamletFile "templates/menu2.hamlet")
+        [whamlet|
+            <div class="container">
+                <div class="row">
+                    <h1>Seja bem vindo administrador
+                    <p>Escolha o que você deseja fazer nesse momento. Você pode:
+                    <p>
+                        Cadastrar, Listar, excluir Animais da lista.
+                    <p>
+                        Cadastrar, Listar, excluir Usuarios administradores.
+                    <p>
+                        Cadastrar, Listar, excluir Mensagens que ja foram lidas da lista.
+                    <p>
+                        Cadastrar, Listar, excluir Especies da lista.    
+                    <br>
+                    <br>
+                    <br>
+                
+        |]
+        $(whamletFile "templates/footer.hamlet")
+
     
 postLogoutR :: Handler Html
 postLogoutR = do
+
     deleteSession "_ID"
     redirect HomeR

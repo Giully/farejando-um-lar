@@ -1,17 +1,11 @@
 
 .animal{
-    	float:left;
-	/*	margin: 5px 5px 5px 2px ;*/
-		padding: 25px;
-		padding-bottom:5%;
-		padding-top:5%;
-		padding-left:3%;
 		width:250px;
 		height:350px;
-	
 }
 
-.imgaAnimal{
+
+.imgAnimal{
 	border-radius:5px;
     width:250px;
     height:150px;
@@ -19,5 +13,6 @@
 
 .descricao{
 	margin-left: 30px;
+	color:#000;
 	
 }

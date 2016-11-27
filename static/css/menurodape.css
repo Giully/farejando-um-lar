@@ -5,7 +5,9 @@
 *{
 	margin:0;
 	padding:0;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	overflow-x: hidden;
+
 	}
 
 .logotipo{
@@ -14,9 +16,8 @@
 
 
 .menu{
-	display:inline;
-	float:left;
-	border:2px solid green;
+	
+	/*aq*/
 }
 
 
@@ -47,11 +48,9 @@ h5{
 
 
 #login{
-		display:none;
 	    width:13%;
 		height:205px;
 		position:fixed;
-		z-index:99999;
 		top:4.5%;
 		right:15%;
 		text-align:center;
@@ -63,6 +62,7 @@ h5{
 		}	
 /*FIM LOGIN*/	
 
+.imagem{width:250px; height:250px;}
 
 	
 /*RODAPÉ */	
@@ -123,11 +123,12 @@ footer
 .menufooter >.submenufooter >ul>li{
 	margin:5%;
 	list-style: none;
+	
 
 }
 
 .menufooter>.submenufooter>ul>li>a{
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	letter-spacing:1px;
 	text-decoration:none;
@@ -149,113 +150,23 @@ footer
 	margin:3% 10%;
 	font-weight: 200;
 	text-align:center;
+		overflow-x: hidden;
+
 }
 
 
 
 /*FIM RODAPÉ */	
 
-/*ÍCONES FONT AWESOME*/
-
-
-
-.fa-facebook{
-	color:#fff;
-}
-
-.fa-facebook:hover{
-	color:#0277bd;
-}
-
-.fa-twitter{
-	color:#fff;
-}
-
-.fa-twitter:hover{
-	color:#81d4fa;
-}
-
-.fa-envelope{
-	color:#fff;	
-}
-
-.fa-envelope:hover{
-	color:#81c784;	
-}
-
-
-.fa-search{
-	color:#3C1611;
-}
-
-.fa-paw{
-	color:#3C1611;
-
-}
-
-.fa-sign-in{
-	color:#3C1611;
-}
-
-
-.fa-phone{
-	color:#3C1611;
-}
-
-.fa-user-plus{
-		color:#3C1611;
-}
 
 .menu_responsivo,.nav_responsiva{
 display:none;}
 /* 
-header{ 
-width:100%;
-height:100px;
-background-color:rgba(235,118,35,1);
-background-color:green;
-margin:auto;
-position:fixed;
-opacity: 0.90;
-z-index:4;
-top:0;
-}
-
-.logo{ float:left;
-position:fixed;
-margin-left:27px;
-margin-top:30px;
-}
-
-nav{
-	display:block;
-}
-
-nav li
-	{
-	   display:inline;
-		font-family: 'Open Sans', sans-serif;
-		margin: 30px;
-		padding-left: 30px;
-	}
-
-
-nav ul{
-		width:90%;
-		margin-top:-5%;
-		margin-left:15%;	
-	}	
-
-
-
 
 
 MENU ------------------------------------
 
 
-a:link{
-    color: #eee;
-	text-decoration:none;	 }
 
 NAV FIXA*/	
 /*
@@ -315,28 +226,21 @@ li{
        HEADER */
 
 .logo{ float:left;
-position:fixed;
-margin-left:27px;
-margin-top:30px;
+position:static;
+margin-left:12px;
+margin-top:20px;
 
 }
-.loginmenu
+.login
 	{
-		position:absolute;
-		width:9%;
-		top:0%;
-		right:18%;
-		font-family: 'Amatic SC', cursive;
-		font-weight:bold;
+		width:60px; 
+		margin-right:50px;
+		margin-top:0;
 		color:#eee;
-		font-size:26px;
-		border: none;
 		border-bottom: 6px solid #4e342e;
-	 	background: #795548;
-		border-radius: 10px;
-}
-	
-.loginmenu:active{
+		background: #795548;
+	}	
+.login:active{
 	border-bottom: 0;
 	box-shadow: none;
 	-webkit-transition: all 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
@@ -366,7 +270,7 @@ margin-top:30px;
 		
 	}
 	nav ul li a:hover{
-		color:#00ff00;
+		color:#000000;
 	}
 	nav ul li:hover{
 		background-color:rgba(235,118,35,1);

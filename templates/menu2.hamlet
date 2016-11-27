@@ -19,9 +19,11 @@
                     <a href=@{EspecieR}>Cadastrar Especie
                 <li>
                     <a href=@{ListarR}> Visualizar Especies
-                <li>
-                    <form action=@{LogoutR} method=post class="loginmenu">
-                        <input type="submit" value="Logout">
+                <ul class="nav navbar-nav navbar-right">
+                    <li> 
+                        <form action=@{LogoutR} method=post>
+                            <input type="submit" value="Logout" class="login">
+
 
 
 

@@ -1,4 +1,4 @@
-            <video src=@{StaticR img_introfarejando_mp4} type="video/mp4" id="bg-gato" muted loop autoplay>
+          <video src=@{StaticR img_introfarejando_mp4} type="video/mp4" class="bg-gato" muted loop autoplay>
 
        <div class="container_sessao1">
             <div class="container_sessao2">
@@ -10,19 +10,19 @@
                         Est&aacute; a procura de uma companhia que lhe d&ecirc; muito amor e carinho? Adote um animalzinho!
                 <section>
                     <h1>
-                        Doe
-                    <img src=@{StaticR img_Penguins_jpg} class="imagemsection">
+                        Contato
+                    <img src=@{StaticR img_contato_jpg} class="imagemsection">
                     <p>
-                        Quer doar um animalzinho resgatado? Doe aqui no Farejando um Lar!
+                        Entre em contato conosco
                 <section> 
                     <h1>
-                        Perdi
-                    <img src=@{StaticR img_lucky_jpg} class="imagemsection">
+                        Ajude
+                    <img src=@{StaticR img_ajude_jpg} class="imagemsection">
                     <p>
-                        Perdeu seu companheiro? Anuncie no Farejando um Lar e logo ele estar&aacute; de volta.
+                        Não pode adotar e quer ajudar? Descubra como nos ajudar!
                 <section>
                     <h1>
-                        Achei
-                    <img src=@{StaticR img_Penguins_jpg} class="imagemsection">
+                        Sobre
+                    <img src=@{StaticR img_sobre_jpg} class="imagemsection">
                     <p>
-                        Encontrou um animalzinho? Agora &eacute; hora de encontrar seu dono! Anuncie aqui
+                        Conheça um pouco sobre a nossa história

@@ -8,11 +8,11 @@
                 <li>
                     <a href=@{HomeR}> Home
                 <li>
-                    <a href=@{SobreR}> Sobre a Farejando um Lar
+                    <a href=@{SobreR}> Sobre
                 <li>
                     <a href=@{ListAdotarR}> Animais para Adoção
                 
                 <li>
                     <a href=@{ContatoR}> Entrar em Contato
                 <li>
-                    <a href=@{LoginR}>Administrador
+                    <a href=@{LoginR}> Área Administrativa

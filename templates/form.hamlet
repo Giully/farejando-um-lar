@@ -2,6 +2,8 @@
     <div class="container">
         <div id="formulario">
             <p>
+                <br>
+                <br>
                 Cadastro de #{y}
                 <form method=post action=@{x} enctype=#{enctype}>
                     ^{widget}

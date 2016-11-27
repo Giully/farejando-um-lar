@@ -20,10 +20,12 @@ getContatoR :: Handler Html
 getContatoR = do
             (widget, enctype) <- generateFormPost formContato
             defaultLayout $ do
-                addStylesheet $ StaticR css_menurodape_css
+                addStylesheet $ StaticR css_menu_css
                 addStylesheet $ StaticR css_adocao_css
-                $(whamletFile "templates/menu3.hamlet")
-                widgetForm ContatoR enctype widget "Contato"
+                addStylesheetRemote "https://fonts.googleapis.com/css?family=Amatic+SC"
+                addStylesheetRemote "https://fonts.googleapis.com/css?family=Open+Sans"                  
+                $(whamletFile "templates/menu.hamlet")
+                widgetForm ContatoR enctype widget "Mensagem"
                 $(whamletFile "templates/footer.hamlet")
 
 postContatoR :: Handler Html
@@ -35,6 +37,8 @@ postContatoR = do
                     defaultLayout $ do
                         setTitle "Farejando um lar"
                         addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+                        addStylesheetRemote "https://fonts.googleapis.com/css?family=Amatic+SC"
+                        addStylesheetRemote "https://fonts.googleapis.com/css?family=Open+Sans"  
                         addStylesheet $ StaticR css_contato_css
                         addStylesheet $ StaticR css_menurodape_css
                         $(whamletFile "templates/menu3.hamlet")
@@ -51,9 +55,11 @@ getListContatoR = do
                 defaultLayout $ do
                     setTitle "Farejando um lar"
                     addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+                    addStylesheetRemote "https://fonts.googleapis.com/css?family=Amatic+SC"
+                    addStylesheetRemote "https://fonts.googleapis.com/css?family=Open+Sans"  
                     addStylesheet $ StaticR css_menurodape_css
                     addStylesheet $ StaticR css_adocao_css
-                    $(whamletFile "templates/menu3.hamlet")
+                    $(whamletFile "templates/menu2.hamlet")
                     [whamlet|
                             <div class="container">
                                 <h2>Mensagens Recebida</h2>

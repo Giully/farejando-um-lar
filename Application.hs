@@ -8,6 +8,7 @@ import Foundation
 import Yesod
 import Yesod.Core
 import Yesod.Static
+import Data.Maybe
 
 import Handler.Usuario
 import Handler.Contato
@@ -47,17 +48,11 @@ getHomeR = do
                 }
         |]
         addScriptRemote "https://code.jquery.com/jquery-3.1.1.min.js"
-        addStylesheet $ StaticR css_menurodape_css
-        {-[whamlet|
+        addStylesheet $ StaticR css_menu_css
+        addStylesheetRemote "https://fonts.googleapis.com/css?family=Amatic+SC"
+        addStylesheetRemote "https://fonts.googleapis.com/css?family=Open+Sans"  
+        addStylesheetRemote "https://fonts.googleapis.com/css?family=Roboto+Slab"  
 
-            <ul>
-                $maybe _ <- sess
-                    <li> 
-                        <form action=@{LogoutR} method=post>
-                            <input type="submit" value="Logout">
-                $nothing
-                    <li> <a href=@{LoginR}>Logar
-        |]-}
         $(whamletFile "templates/menu.hamlet")
         $(whamletFile "templates/index.hamlet")
         $(whamletFile "templates/footer.hamlet")
@@ -71,9 +66,12 @@ getSobreR = do
             <meta charset="UTF-8">
         |]
         addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        addScriptRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        addStylesheet $ StaticR css_menurodape_css
-        $(whamletFile "templates/menu3.hamlet")
+        addStylesheet $ StaticR css_menu_css
+        addStylesheetRemote "https://fonts.googleapis.com/css?family=Amatic+SC"
+        addStylesheetRemote "https://fonts.googleapis.com/css?family=Open+Sans"  
+        addStylesheetRemote "https://fonts.googleapis.com/css?family=Roboto+Slab"  
+
+        $(whamletFile "templates/menu.hamlet")
         $(whamletFile "templates/sobre.hamlet")
         $(whamletFile "templates/footer.hamlet")
 

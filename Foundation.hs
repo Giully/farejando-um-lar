@@ -17,7 +17,6 @@ data App = App {getStatic :: Static , connPool :: ConnectionPool }
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
 
 Usuario
-    nome   Text
     email  Text
     senha  Text
     deriving Show

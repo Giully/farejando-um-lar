@@ -1,20 +1,18 @@
 <header>
   <div class="container">
-            <header id="header" class="row">
-                <div class="col-md-4 col-xs-6">
-                    <a href=@{HomeR}><img src=@{StaticR img_logosite_jpg} class="img-responsive">
 
-    
-    <nav class="menu"> 
-        <ul>
-            <li>
-                <a href="@{HomeR}"><img src=@{StaticR img_logosite_jpg} class="logotipo">
-            <li>
-                <a href="@{SobreR}">Sobre
-            <li>
-                <a href="@{HomeR}">Home
-            <li>
-                <a href="@{UsuarioR}">Cadastro
-            <li>
-                <a href="@{LoginR}">Login
+    <nav class="navbar">
+        <a href=@{HomeR}><img src=@{StaticR img_logohorizontal_svg}} class="logo img-responsive">
+        <ul class="nav navbar-nav navbar-right">
 
+            <li>
+                <a href=@{HomeR}> Home
+            <li>
+                <a href=@{SobreR}> Sobre
+            <li>
+                <a href=@{ListAdotarR}> Animais para Adoção
+            
+            <li>
+                <a href=@{ContatoR}> Entrar em Contato
+            <li>
+                <a href=@{LoginR}> Área Administrativa
