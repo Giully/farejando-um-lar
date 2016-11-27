@@ -6,13 +6,13 @@
         <ul class="nav navbar-nav navbar-right">
 
             <li>
-                <a href=@{HomeR}> Home
+                <a href=@{HomeR}> _{MsgHome}
             <li>
-                <a href=@{SobreR}> Sobre
+                <a href=@{SobreR}> _{MsgSobre}
             <li>
-                <a href=@{ListAdotarR}> Animais para Adoção
+                <a href=@{ListAdotarR}> _{MsgAdocao}
             
             <li>
-                <a href=@{ContatoR}> Entrar em Contato
+                <a href=@{ContatoR}> _{MsgContato}
             <li>
-                <a href=@{LoginR}> Área Administrativa
+                <a href=@{LoginR}> _{MsgAdm}

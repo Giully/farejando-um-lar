@@ -4,25 +4,25 @@
             <div class="container_sessao2">
                 <section>
                     <h1>
-                        Adote
+                        _{MsgAdote}
                     <img src=@{StaticR img_Penguins_jpg} class="imagemsection">
                     <p>
-                        Est&aacute; a procura de uma companhia que lhe d&ecirc; muito amor e carinho? Adote um animalzinho!
+                         _{MsgAdoteIndex}
                 <section>
                     <h1>
-                        Contato
+                       _{MsgContatos}
                     <img src=@{StaticR img_contato_jpg} class="imagemsection">
                     <p>
-                        Entre em contato conosco
+                         _{MsgContatoIndex}
                 <section> 
                     <h1>
-                        Ajude
+                       _{MsgAjude}
                     <img src=@{StaticR img_ajude_jpg} class="imagemsection">
                     <p>
-                        Não pode adotar e quer ajudar? Descubra como nos ajudar!
+                        _{MsgAjudeIndex}
                 <section>
                     <h1>
-                        Sobre
+                       _{MsgSobreT}
                     <img src=@{StaticR img_sobre_jpg} class="imagemsection">
                     <p>
-                        Conheça um pouco sobre a nossa história
+                       _{MsgSobreIndex}

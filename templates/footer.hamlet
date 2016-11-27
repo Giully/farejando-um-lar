@@ -2,25 +2,25 @@
        <div class="menufooter">
             <div class="submenufooter">
                 <h2>
-                    Farejar
+                    _{MsgFarejar}
                 <ul>
                     <li>
-                        <a href="@{UsuarioR}">Encontre o animal desejado
+                        <a href="@{ListAdotarR}">_{MsgEncontre}
                     <li>
-                        <a href="@{UsuarioR}">Publique seu anuncio
+                        <a href="@{ListAdotarR}">_{MsgAdocao}
             <div class="submenufooter">
                 <h2>
-                    Contatos
+                    _{MsgContatos}
                 <ul>
                     <li>
-                        <a href="@{UsuarioR}">Mande-nos uma mensagem
+                        <a href="@{ContatoR}">_{MsgMande}
                     <li>
-                        <a href="@{UsuarioR}">Redes Sociais
+                        <a href="@{UsuarioR}">_{MsgSocial}
             <div class="submenufooter">
                 <h2>
-                    Cadastro
+                    _{MsgFarejar}
                 <ul>
                     <li>
-                        <a href="@{UsuarioR}">Cadastre-se
+                        <a href="@{UsuarioR}">_{MsgContatos}
     <div id="copyright">
-        <p> Copyright &copy; 2016.  Todos os direitos reservados. </p>
+        <p> _{MsgCopyright} </p>

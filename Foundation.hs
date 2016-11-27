@@ -10,12 +10,10 @@ import Yesod.Static
 import Database.Persist.Postgresql
     ( ConnectionPool, SqlBackend, runSqlPool)
 
-staticFiles "static"
 
 data App = App {getStatic :: Static , connPool :: ConnectionPool }
 
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
-
 Usuario
     email  Text
     senha  Text
@@ -40,6 +38,8 @@ Animal
     deriving Show
 
 |]
+
+staticFiles "static"
 
 mkYesodData "App" $(parseRoutesFile "routes")
 

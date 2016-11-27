@@ -66,12 +66,12 @@ getSobreR = do
             <meta charset="UTF-8">
         |]
         addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        addStylesheet $ StaticR css_menu_css
+        addStylesheet $ StaticR css_menurodape_css
         addStylesheetRemote "https://fonts.googleapis.com/css?family=Amatic+SC"
         addStylesheetRemote "https://fonts.googleapis.com/css?family=Open+Sans"  
         addStylesheetRemote "https://fonts.googleapis.com/css?family=Roboto+Slab"  
 
-        $(whamletFile "templates/menu.hamlet")
+        $(whamletFile "templates/menu3.hamlet")
         $(whamletFile "templates/sobre.hamlet")
         $(whamletFile "templates/footer.hamlet")
 
