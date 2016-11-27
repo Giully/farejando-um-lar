@@ -163,71 +163,12 @@ display:none;}
 /* 
 
 
-MENU ------------------------------------
-
-
-
-NAV FIXA*/	
-/*
-.mostrar
-	{
-	z-index:99999;
-	position:fixed;
-	top:0;
-	width:100%;
-	background-color:rgba(235,118,35,1);
-	-webkit-box-shadow: 0px 0px 13px 0px rgba(5,5,5,0.54);
-	-moz-box-shadow: 0px 0px 13px 0px rgba(5,5,5,0.54);
-	box-shadow: 0px 0px 13px 0px rgba(5,5,5,0.54);
-	}
-
-.mostrar>ul{
-	width: 90%;
-	padding-left:5%;
-	padding-top:1%;
-	text-align: center;
-}
-
-li{
-	margin-top: 40px;
-}
-
-
-.mostrar > ul > li > a{
-    color: #eee;
-	font-size:16px;
-    margin:20px;
-	text-decoration:none;
-	display: inline;
-	border:2px solid green;
-	padding-bottom:50%;
-}
-
-.mostrar > ul > a:hover{
-	color: rgba(60,22,17,0.6);
-	-webkit-transition: all 350ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
-    -moz-transition: all 350ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
-    -o-transition: all 350ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
-    transition: all 350ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
-
-}
-
-
-.botao{
-	background-color:transparent;
-	font-family: 'Roboto';
-	border:2px solid #eee;
-	border-radius:5px;
-	color:#404040;
-	
-}
-
        HEADER */
 
 .logo{ float:left;
-position:static;
-margin-left:12px;
-margin-top:20px;
+	position:static;
+	margin-left:12px;
+	margin-top:20px;
 
 }
 .login
@@ -265,6 +206,8 @@ margin-top:20px;
 	}
 
 	nav{
+		width:100%;
+		height:100px;
 		background-color:rgba(235,118,35,1);
 		
 	}
