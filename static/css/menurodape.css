@@ -61,7 +61,7 @@ h5{
 		}	
 /*FIM LOGIN*/	
 
-.imagem{width:360px; height:320px;}
+.imagem{width:360px; height:320px; margin-bottom:5%;}
 
 	
 /*RODAPÉ */	
@@ -238,6 +238,18 @@ display:none;}
 	
 	.imagemsection{width:200px; height:200px; border-radius: 50%; float:left;}
 	
+.font-sobre{	
+			font-family: 'Amatic SC', cursive;
+			text-align:center;
+			font-size:45px;
+}	
+
+
+
+.sobre{	
+	font-family: 'Open Sans', sans-serif;
+	font-size:16px;
+}
 	
 	#header .form-inline label {
 	  width: 100%;

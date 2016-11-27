@@ -12,6 +12,8 @@
                 <li>
                     <a href=@{ListContatoR}> Visualizar Mensagens
                 <li>
+                    <a href=@{ListarUsuarioR}> Visualizar usuários                    
+                <li>
                     <a href=@{UsuarioR}> Cadastrar novo usuário
                 <li>
                     <a href=@{EspecieR}>Cadastrar Especie

@@ -2,6 +2,8 @@
 /usuario/cadastro                UsuarioR         GET POST
 /usuario/login                   LoginR           GET POST
 /usuario/perfil                  PerfilR          GET
+/usuario/listagem                ListarUsuarioR   GET 
+/usuario/apagar/#UsuarioId       DelUsuarioR      POST
 /logout                          LogoutR          POST
 /static                          StaticR          Static getStatic
 /farejandoumlar/sobre            SobreR           GET

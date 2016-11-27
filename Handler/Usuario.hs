@@ -209,6 +209,8 @@ getPerfilR = do
     userId <- lookupSession "_ID"
     defaultLayout $ do
         addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        addStylesheetRemote "https://fonts.googleapis.com/css?family=Amatic+SC"
+        addStylesheetRemote "https://fonts.googleapis.com/css?family=Open+Sans"          
         addStylesheet $ StaticR css_menurodape_css
         addStylesheet $ StaticR css_adocao_css
         $(whamletFile "templates/menu2.hamlet")
@@ -231,6 +233,46 @@ getPerfilR = do
                 
         |]
         $(whamletFile "templates/footer.hamlet")
+        
+
+getListarUsuarioR :: Handler Html
+getListarUsuarioR = do
+                usuarios <- runDB $ selectList [] [Asc UsuarioEmail]
+                defaultLayout $ do
+                    setTitle "Farejando Um Lar"
+                    addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+                    addStylesheetRemote "https://fonts.googleapis.com/css?family=Amatic+SC"
+                    addStylesheetRemote "https://fonts.googleapis.com/css?family=Open+Sans"  
+                    addStylesheet $ StaticR css_menurodape_css
+                    addStylesheet $ StaticR css_adocao_css
+                    $(whamletFile "templates/menu2.hamlet")
+                    [whamlet|
+                            <div class="container">
+                                <h2>Listar Usuarios</h2>
+                                <table class="table">
+                                    <thead>
+                                        <tr> 
+                                            <th> id  
+                                            <th> E-mail
+                                            <th> Senha
+                                            <th> excluir
+                                    $forall Entity alid usuario <- usuarios
+                                        <tr>
+                                            <form action=@{DelUsuarioR alid} method=post> 
+                                                <td> #{fromSqlKey      alid}  
+                                                <td> #{usuarioEmail     usuario} 
+                                                <td> #{usuarioSenha    usuario} 
+                                                <td> <input type="submit" value="excluir">
+                    
+                    |]
+                    $(whamletFile "templates/footer.hamlet")
+
+
+postDelUsuarioR :: UsuarioId -> Handler Html
+postDelUsuarioR alid = do 
+                runDB $ delete alid
+                redirect ListarUsuarioR
+
 
     
 postLogoutR :: Handler Html
