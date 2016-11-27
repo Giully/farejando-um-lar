@@ -27,9 +27,9 @@ getAnimalR :: Handler Html
 getAnimalR = do
             (widget, enctype) <- generateFormPost formAnimal
             defaultLayout $ do
+            addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
             addStylesheet $ StaticR css_menurodape_css
             addStylesheet $ StaticR css_adocao_css
-            addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
             addStylesheetRemote "https://fonts.googleapis.com/css?family=Amatic+SC"
             addStylesheetRemote "https://fonts.googleapis.com/css?family=Open+Sans"              
             $(whamletFile "templates/menu2.hamlet")
@@ -42,10 +42,15 @@ postAnimalR = do
                 FormSuccess animal -> do
                     runDB $ insert animal
                     defaultLayout $ do
+                        addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+                        addStylesheetRemote "https://fonts.googleapis.com/css?family=Amatic+SC"
+                        addStylesheetRemote "https://fonts.googleapis.com/css?family=Open+Sans"  
                         addStylesheet $ StaticR css_menurodape_css
+                        addStylesheet $ StaticR css_adocao_css
                         $(whamletFile "templates/menu2.hamlet")
                         [whamlet|
-                            <h1> #{animalNome animal} foi inserido com sucesso
+                            <div class="sucesso_insercao">    
+                                <h1 class="h1_sucesso"> Parabens, #{animalNome animal} foi inserido com sucesso!
                         |]
                         $(whamletFile "templates/footer.hamlet")
                 _ -> redirect AnimalR

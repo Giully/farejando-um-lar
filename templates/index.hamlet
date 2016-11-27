@@ -5,7 +5,7 @@
                 <section>
                     <h1>
                         _{MsgAdote}
-                    <img src=@{StaticR img_Penguins_jpg} class="imagemsection">
+                    <img src=@{StaticR img_adote_jpg} class="imagemsection">
                     <p>
                          _{MsgAdoteIndex}
                 <section>

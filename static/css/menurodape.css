@@ -61,7 +61,7 @@ h5{
 		}	
 /*FIM LOGIN*/	
 
-.imagem{width:250px; height:250px;}
+.imagem{width:360px; height:320px;}
 
 	
 /*RODAPÉ */	
@@ -69,7 +69,6 @@ h5{
 footer
 	{	
 	position: relative;
-	overflow: hidden;
 	float:left;
 	width:100%;
 	background-color:#ed8338;
@@ -149,9 +148,23 @@ footer
 	margin:3% 10%;
 	font-weight: 200;
 	text-align:center;
-		overflow-x: hidden;
 
 }
+
+.sucesso_insercao{
+					width:100%;
+					height:250px;
+}
+
+.h1_sucesso{ 
+		    font-family: 'Amatic SC', cursive;
+		    font-size:45px;
+			text-align:center;
+}
+
+
+
+
 
 
 

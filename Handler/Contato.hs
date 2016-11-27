@@ -78,9 +78,9 @@ getListContatoR = do
                                             <form action=@{DelContatoR alid} method=post> 
                                                 <td> #{fromSqlKey      alid}  
                                                 <td> #{contatoNome     contato} 
+                                                <td> #{contatoEmail    contato} 
                                                 <td> #{contatoTelefone  contato} 
                                                 <td> #{contatoAssunto  contato} 
-                                                <td> #{contatoEmail    contato} 
                                                 <td> #{contatoMensagem contato}
                                                 <td> <input type="submit" value="excluir">
                     
@@ -91,7 +91,5 @@ getListContatoR = do
 postDelContatoR :: ContatoId -> Handler Html
 postDelContatoR alid = do 
                 runDB $ delete alid
-                redirect ContatoR
-                
-                
-              
+                redirect ListContatoR
+            

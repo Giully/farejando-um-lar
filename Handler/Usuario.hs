@@ -179,7 +179,10 @@ postUsuarioR = do
             uid <- runDB $ insert user
             defaultLayout $ do
                 addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-                $(whamletFile "templates/menu3.hamlet")
+                addStylesheetRemote "https://fonts.googleapis.com/css?family=Amatic+SC"
+                addStylesheetRemote "https://fonts.googleapis.com/css?family=Open+Sans"  
+                addStylesheet $ StaticR css_menurodape_css
+                $(whamletFile "templates/menu2.hamlet")
                 [whamlet|
                 O Usuário com email #{usuarioEmail user}, foi cadastrado com sucesso.
                 |]
@@ -217,7 +220,7 @@ getPerfilR = do
                     <p>
                         Cadastrar, Listar, excluir Animais da lista.
                     <p>
-                        Cadastrar, Listar, excluir Usuarios administradores.
+                        Cadastrar Usuarios administradores.
                     <p>
                         Cadastrar, Listar, excluir Mensagens que ja foram lidas da lista.
                     <p>

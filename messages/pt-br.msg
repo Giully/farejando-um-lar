@@ -1,4 +1,4 @@
-Sobre: Sobre a Farejando um Lar
+Sobre: Sobre Farejando um Lar
 Home: Home
 Adocao: Animais para Adoção
 Contato: Entrar em Contato

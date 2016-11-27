@@ -1,19 +1,30 @@
         <main id="sobre" id="conteudo">
             <div class="row">
                 <div class="container">
-                    <h1> _{MsgSobre}
-                    <p class="text-justify">
+                    <h1 class="font-sobre"> 
+                        _{MsgSobre}
+                    <p class="sobre text-justify">
+                       A ONG farejando um lar, tem o objetivo de tornar Santos cidade referência 
+                        na qualidade da vida animal. Para isso, fazemos o maior numero de castrações 
+                        possiveis para diminuir o numero de nascimentos e consequentemente o abandono. 
+                        Também fazemos atendimentos de emergencia para população de baixa renda para 
+                        evitar o sofrimento em animais que não possuem condições de ir a um veterinario 
+                        particular. Fazemos tambem um trabalho de educação principalmente com colegios, 
+                        para tornar as crianças agentes multiplicadores de nosssas ideias e 
+                        trabalho.Neste site, publicaremos matérias com assuntos que envolvem o respeito 
+                        a vida animal.
             <div class="row">
                 <div class="container">                    
-                    <div class="col-md-6">
+                    <div class="col-md-4 col-md-offset-2">
                         <img src=@{StaticR img_animal1_jpg} class="imagem img-responsive center-block">
-                    <div class="col-md-6">
-                        <img src=@{StaticR img_animal2_jpg} class="imagem img-responsive center-block">
-                    <br>
-            <div class="row">        
-                    <div class="col-md-6">
-                        <img src=@{StaticR img_animal3_jpg} class="imagem img-responsive center-block">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <img src=@{StaticR img_animal4_jpg} class="imagem img-responsive center-block">
+                    <br>
+            <div class="row">   
+                <div class="container">
+                    <div class="col-md-4 col-md-offset-2">
+                        <img src=@{StaticR img_adotar_jpg} class="imagem img-responsive center-block">
+                    <div class="col-md-4">
+                        <img src=@{StaticR img_adocaolinda_jpg} class="imagem img-responsive center-block">
                         
                         

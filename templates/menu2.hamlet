@@ -7,10 +7,8 @@
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href=@{AnimalR}>Cadastrar Animal
-                
                 <li>
                     <a href=@{ListAnimalR}> Animais cadastrados
-                
                 <li>
                     <a href=@{ListContatoR}> Visualizar Mensagens
                 <li>
@@ -19,6 +17,7 @@
                     <a href=@{EspecieR}>Cadastrar Especie
                 <li>
                     <a href=@{ListarR}> Visualizar Especies
+
                 <ul class="nav navbar-nav navbar-right">
                     <li> 
                         <form action=@{LogoutR} method=post>

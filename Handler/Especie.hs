@@ -78,9 +78,7 @@ getListarR = do
              
 postDelEspecieR :: EspecieId -> Handler Html
 postDelEspecieR alid = do
-     runDB $ delete alid
-     redirect EspecieR
+             runDB $ delete alid
+             redirect ListarR
 
 
-
-                    
